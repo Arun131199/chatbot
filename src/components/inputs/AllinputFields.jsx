@@ -53,6 +53,7 @@ export default function AllinputFields({
                 )}
 
                 <input
+                    name={name}
                     type={inputType}
                     placeholder={placeholder}
                     value={value}
@@ -62,19 +63,17 @@ export default function AllinputFields({
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}
                     className={`
-            block w-full 
-            ${sizeClasses[size]}
-            ${variantClasses[variant]}
-            ${errorClasses}
-            ${icon ? 'pl-10' : ''}
-            ${disabled ? 'bg-gray-100 cursor-not-allowed opacity-60' : 'bg-white'}
-            border rounded-md shadow-sm
-            focus:outline-none
-            transition-all duration-200
-            ${isFocused ? 'ring-2 ring-blue-200' : ''}
-          `}
-                    aria-invalid={!!error}
-                    aria-describedby={error ? `${label}-error` : helperText ? `${label}-helper` : undefined}
+        block w-full 
+        ${sizeClasses[size]}
+        ${variantClasses[variant]}
+        ${errorClasses}
+        ${icon ? 'pl-10' : ''}
+        ${disabled ? 'bg-gray-100 cursor-not-allowed opacity-60' : 'text-white'}
+        border rounded-md shadow-sm
+        focus:outline-none
+        transition-all duration-200
+        ${isFocused ? 'ring-2 ring-blue-200' : ''}
+    `}
                     {...props}
                 />
 
