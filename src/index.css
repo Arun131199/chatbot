@@ -1,0 +1,9 @@
+body{
+  background: linear-gradient(109deg, #173746 0%,#132127 100% );
+  font-family: popins;
+}
+
+@font-face {
+  font-family: popins;
+  src: url( ../public/font/Poppins-Regular.ttf);
+}
